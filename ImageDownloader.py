@@ -8,7 +8,7 @@ os.environ['PL_API_KEY']='PLAK75f5a3397deb4421b656652e0c7ecd8c'
 
 # setup the API key from the `PL_API_KEY` environment variable
 PLANET_API_KEY = os.getenv('PL_API_KEY')
-item_type = "PSScene4Band"
+item_type = "PSScene3Band"
 
 # setup a session
 session = requests.Session()
@@ -21,11 +21,11 @@ geojson_geometry = {
   "type": "Polygon",
   "coordinates": [
     [ 
-      [-121.59290313720705, 37.93444993515032],
-      [-121.27017974853516, 37.93444993515032],
-      [-121.27017974853516, 38.065932950547484],
-      [-121.59290313720705, 38.065932950547484],
-      [-121.59290313720705, 37.93444993515032]
+      [-83.38846206665039, 33.920286634865164],
+      [-83.35086822509766, 33.920286634865164],
+      [-83.35086822509766, 33.95916582840359],
+      [-83.38846206665039, 33.95916582840359],
+      [-83.38846206665039, 33.920286634865164]
     ]
   ]
 }
@@ -42,8 +42,8 @@ date_range_filter = {
   "type": "DateRangeFilter",
   "field_name": "acquired",
   "config": {
-    "gte": "2016-08-31T00:00:00.000Z",
-    "lte": "2016-09-01T00:00:00.000Z"
+    "gte": "2021-03-22T00:00:00.000Z",
+    "lte": "2022-03-22T00:00:00.000Z"
   }
 }
 
