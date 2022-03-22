@@ -99,17 +99,19 @@ result = \
 print(result.json().keys())
 print()
 
-# in order to download an assent (AKA an image), we first have to activate it
-links = result.json()[u"analytic"]["_links"]
+# we only want only the color corrected images
+links = result.json()[u"visual"]["_links"]
 self_link = links["_self"]
 activation_link = links["activate"]
 
+# request activation of the 'visual' asset
 activate_result = \
   requests.get(
     activation_link,
     auth=HTTPBasicAuth(PLANET_API_KEY, '')
   )
-  
+
+# in order to download an assent, we first have to activate it
 activation_status_result = \
   requests.get(
     self_link,
