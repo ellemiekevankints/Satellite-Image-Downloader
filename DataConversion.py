@@ -142,9 +142,9 @@ tag = '{' + ns['ps'] + '}Acquisition'
 
 # retrieve specified metadata
 for elem in root.iter(tag):
-    viewAng = elem.findall('ps:spaceCraftViewAngle', ns)
-    azimAng = elem.findall('ps:azimuthAngle', ns)
-    print(viewAng)
-    print(azimAng)
+    viewAng = elem.find('ps:spaceCraftViewAngle', ns)
+    azimAng = elem.find('ps:azimuthAngle', ns)
+    print(viewAng.tag + ': ' + viewAng.text)
+    print(azimAng.tag + ': ' + azimAng.text)
   
 
