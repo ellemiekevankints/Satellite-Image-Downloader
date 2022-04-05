@@ -16,7 +16,6 @@ for i in range(len(timestamp)):
     unixtime = time.mktime(datetime.datetime.strptime(timestamp[i], '%Y-%m-%dT%H:%M:%SZ').timetuple())
     unixtime = int(unixtime)
     timestamp[i] = unixtime
-    print(timestamp[i])
     
 xfov = [2.8 * (math.pi/180), 2.8 * (math.pi/180)] # convert deg to rad
 yfov = [2.8 * (math.pi/180), 2.8 * (math.pi/180)] # convert deg to rad
@@ -45,6 +44,6 @@ output = [[filename[0], xpos[0], ypos[0], zpos[0], xrot[0], yrot[0], zrot[0], xf
 
 # create the params.csv file
 params = pd.DataFrame(output, columns=columns)
-params.to_csv('/Users/ellemiekevankints/Desktop/SSRL/PlanetAPI/PlanetAPI/OutputCSV/params.csv', index=False)
+params.to_csv('OutputCSV/params.csv', index=False)
 
 
