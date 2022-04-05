@@ -39,10 +39,11 @@ columns = ['filename', 'x position', 'y position', 'z position', 'x rotation',
            'y rotation', 'z rotation', 'x field of view', 'y field of view',
            'camera focal length', 'x pixel well size', 'y pixel well size',
            'UNIX timestamp', 'x pixel count', 'y pixel count']
-output = [filename, xpos, ypos, zpos, xrot, yrot, zrot, xfov, yfov, foc, xsize, ysize, timestamp, xcount, ycount]
+output = [[filename[0], xpos[0], ypos[0], zpos[0], xrot[0], yrot[0], zrot[0], xfov[0], yfov[0], foc[0], xsize[0], ysize[0], timestamp[0], xcount[0], ycount[0]],
+          [filename[1], xpos[1], ypos[1], zpos[1], xrot[1], yrot[1], zrot[1], xfov[1], yfov[1], foc[1], xsize[1], ysize[1], timestamp[1]], xcount[1], ycount[1]]
 
 # create the params.csv file
-params = pd.DataFrame([output], columns=columns)
+params = pd.DataFrame(output, columns=columns)
 params.to_csv('/Users/ellemiekevankints/Desktop/SSRL/PlanetAPI/PlanetAPI/OutputCSV/params.csv', index=False)
 
 
