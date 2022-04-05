@@ -43,6 +43,6 @@ output = [filename, xpos, ypos, zpos, xrot, yrot, zrot, xfov, yfov, foc, xsize, 
 
 # create the params.csv file
 params = pd.DataFrame([output], columns=columns)
-params.to_csv('/Users/ellemiekevankints/Desktop/SSRL/PlanetAPI/PlanetAPI/OutputCSV/params.csv')
+params.to_csv('/Users/ellemiekevankints/Desktop/SSRL/PlanetAPI/PlanetAPI/OutputCSV/params.csv', index=False)
 
 
