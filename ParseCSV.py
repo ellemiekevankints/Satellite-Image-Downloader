@@ -32,13 +32,8 @@ q1 = input['q1'].values.tolist()
 q2 = input['q2'].values.tolist()
 q3 = input['q3'].values.tolist()
 
+# this function converts a quaternion into euler angles (roll, pitch, yaw)
 def quaternion_to_euler(x, y, z, w):
-    """
-    Convert a quaternion into euler angles (roll, pitch, yaw)
-    roll - rotation around x in radians (counterclockwise)
-    pitch - rotation around y in radians (counterclockwise)
-    yaw - rotation around z in radians (counterclockwise)
-    """
     t0 = +2.0 * (w * x + y * z)
     t1 = +1.0 - 2.0 * (x * x + y * y)
     roll_x = math.atan2(t0, t1)
@@ -57,7 +52,7 @@ def quaternion_to_euler(x, y, z, w):
 xrot1, yrot1, zrot1 = quaternion_to_euler(q0[0], q1[0], q2[0], q3[0])
 xrot2, yrot2, zrot2 = quaternion_to_euler(q0[1], q1[1], q2[1], q3[1])
 
-# still need x, y pixel count
+# x and y pixel count, leave blank for now, will eventually be photo resolution
 xcount = ['', '']
 ycount = ['', '']
 
