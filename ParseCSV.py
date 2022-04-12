@@ -19,8 +19,8 @@ for i in range(len(timestamp)):
     
 xfov = [2.8 * (math.pi/180), 2.8 * (math.pi/180)] # convert deg to rad
 yfov = [2.8 * (math.pi/180), 2.8 * (math.pi/180)] # convert deg to rad
-xsize = [6.5, 6.5] # nanometers
-ysize = [6.5, 6.5] # nanometers
+xsize = [6.5 * (10**-9), 6.5 * (10**-9)] # convert nanometers to meters
+ysize = [6.5 * (10**-9), 6.5 * (10**-9)] # convert nanometers to meters
 foc = [3.6, 3.6] # meters
 
 xpos = input['x_sat_eci'].values.tolist()
