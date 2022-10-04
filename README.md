@@ -1,1 +1,1 @@
-# PlanetAPI
+# Satellite Image Downloader
